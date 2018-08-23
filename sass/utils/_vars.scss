@@ -1,0 +1,46 @@
+
+$base-font: 16px;
+
+// @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+// @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+$font-family: 'Lato', sans-serif;
+$font-family2: 'Lato', sans-serif;
+
+
+// =============================
+// theme colors
+// =============================
+$primary-color: #00BCF3;
+$secondary-color: #34355E;
+$tertiary-color: #FF824C;
+
+$primary-color-dark: #118DD5;
+$primary-color-dark-2: #294877;
+
+
+// =============================
+// system colors
+// =============================
+$title-color: #1A2F47;
+$gray-color: #717C93;
+$very-light-gray-color: #F7F8F8;
+$grayish-blue: #E6F0FA;
+$span-color: #66A901;
+
+$info-color: #2CA8FF;
+$success-color: #18CE0F;
+$warning-color: #FF981F;
+$danger-color: #FF3636;
+$error-color: $danger-color;
+
+$footer-color: #1D1D1D;
+
+
+
+// =============================
+// TRANSITION
+// =============================
+$transition :  cubic-bezier(0.555, 0.030, 0.480, 0.955) 300ms;

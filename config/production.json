@@ -1,0 +1,6 @@
+{
+	"gzip": true,
+	"listen_port": "4500",
+	"DEFAULT_EMAIL_TO": "support@dnamicro.com",
+	"DEFAULT_EMAIL_FROM": "noreply@dnamicro.com"
+}

@@ -1,0 +1,12 @@
+.anim {
+	opacity: 0;
+	&.animDone {
+		opacity: 1;
+	}
+}
+
+
+.animated {
+	will-change: opacity , transform ;
+	animation-fill-mode: both;
+}

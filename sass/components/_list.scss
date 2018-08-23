@@ -1,0 +1,13 @@
+ul {
+	padding-left: 2rem;
+	li {
+		margin-bottom: .5em;
+		line-height: 2;
+		font-weight: 500;
+		padding-left: .25em;
+	}
+
+	&.checkbox {
+		list-style-image: url('/images/checkbox.png');
+	}
+}

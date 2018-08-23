@@ -1,0 +1,249 @@
+	#hero_section {
+			width: 100%;
+			height: auto;
+			min-height: 80vh;
+			background-image: url(/images/background-min.png);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			display: flex;
+			align-items: center;
+
+			.container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+
+			h1 {
+				font-family: $font-family2;
+				font-weight: 900;
+				color: #fff;
+				text-align: center;
+				span {
+					color: $span-color;
+				}
+			}
+
+			a {
+				background-color: #66A901;
+				font-family: $font-family2;
+				text-align: center;
+				color: $grayish-blue;
+				font-weight: 400;
+				font-size: 20px;
+				width: 200px;
+				height: 50px;
+				border: none;
+				margin-top: 1em;
+				border-radius: 5px;
+				padding: 10px 5px;
+				color: $grayish-blue;
+				text-decoration: none;
+			}
+	}
+
+
+
+	#about_section {
+		height: auto;
+		padding: 2em;
+
+		.container {
+			height: 100%;
+			margin: 2em auto;
+			display: flex;
+		}
+
+		.row {
+			margin-top: .5em;
+			.info {
+				text-align: justify;
+				// margin: 1em auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+
+				h1 {
+					color: $title-color;
+					font-family: $font-family2;
+					margin-bottom: 1em;
+					font-weight: 900;
+					span {
+						color: $span-color;
+					}
+				}
+				p {
+					color: $gray-color;
+					font-family: $font-family2;
+					font-weight: 400;
+					margin-bottom: 1em;
+				}
+				ul {
+					display: flex;
+					padding-left: 1rem;
+					li {
+						margin-right: 1.5em;
+						padding: 0;
+						}
+						li:first-child {
+							list-style: none;
+					}
+				}
+			}
+
+			.image img {
+				display: flex;
+				margin: auto;
+				height: auto;
+				width: 100%;
+				overflow: hidden;
+				max-width: 450px;
+			}
+	}
+
+		@media(max-width: 1024px) {
+			height: auto;
+			.image {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		@media(max-width: 726px) {
+			height: auto;
+			.container {
+				flex-direction: column;
+				.row {
+					display: flex;
+					flex-direction: column;
+					padding: 0 1em;
+					.info {
+						max-width: unset;
+						padding: 0;
+						// h1 {
+						// 	text-align: center;
+						// }
+					}
+					.image {
+						width: 100%;
+						max-width: unset;
+						flex: unset;
+					}
+				}
+			}
+		}
+	}
+
+	#middle_section {
+		height: auto;
+		background-color: #F2F2F2;
+		padding: 2em;
+
+		.container {
+			height: 100%;
+			margin: 2em auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.row {
+			width: 100%;
+			.image {
+				display: flex;
+				align-items: flex-start;
+				img {
+					display: flex;
+					height: auto;
+					width: 100%;
+					overflow: hidden;
+					max-width: 450px;
+				}
+			}
+
+			.info {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				h1 {
+					color: $title-color;
+					text-align: center;
+					font-family: $font-family2;
+					font-weight: 900;
+					span {
+						color: $span-color;
+					}
+				}
+
+				li {
+					list-style: none;
+					color: #000;
+					font-family: $font-family2;
+					font-weight: 400;
+					margin-top: 1em;
+					i {
+						color: $span-color;
+						position: absolute;
+					}
+					span {
+						display: block;
+						margin-left: 30px;
+						line-height: 1.4;
+					}
+				}
+			}
+		}
+
+		@media(max-width: 726px) {
+			height: auto;
+			.container {
+				flex-direction: column;
+				.row {
+					display: flex;
+					flex-direction: column;
+					.info {
+						max-width: unset;
+						padding: 0;
+						h1 {
+							text-align: center;
+							margin-top: 1em;
+						}
+					}
+					.image {
+						width: 100%;
+						max-width: unset;
+						flex: unset;
+					}
+				}
+			}
+		}
+	}
+
+	#FAQ_test {
+		height: auto;
+
+		.container {
+			margin-top: 2em;
+		}
+
+		// h1 {
+		// 	text-align: left;
+		// 	font-family: $font-family2;
+		// 	color: $span-color;
+		// 	margin-bottom: 1.5em;
+		// 	font-weight: 900;
+		// }
+	}
+
+

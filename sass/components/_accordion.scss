@@ -1,0 +1,126 @@
+// $faq-lightgray : #DED9D9;
+$faq-lightgray: #E8E8E8;
+$faq-text-bold : 600;
+$faq-bold-text: #1A2F47;
+$faq-hyperlink-color : #CCC;
+$faq-hyperlink-color-hover : $primary-color;
+
+
+
+.faq-buttons {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: $gray-color;
+	box-shadow: none !important;
+	outline: none !important;
+	border: none !important;
+	font-size: 1em;
+	padding: .5em 2em;
+	background-color: transparent;
+
+	&.hideAcc {
+		display: none;
+	}
+}
+
+#closeAccordions {
+	&:after {
+		@include materialIcon('keyboard_arrow_up');
+	}
+}
+#openAccordions {
+	&:after {
+		@include materialIcon('keyboard_arrow_down');
+	}
+}
+
+.accFaq {
+	width: 100%;
+	font-size: 1rem;
+	font-family: $font-family;
+	// .accFaq-item
+	&-item {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 1em 0;
+		// border: 1px solid  $faq-lightgray;
+		background-color: $faq-lightgray;
+		font-size: 1em;
+		font-family: $font-family2;
+
+		// .accFaq-item-header
+		&-header {
+			font-size: 1em;
+			padding: .5em 2em;
+			color: $faq-bold-text;
+			cursor: pointer;
+			font-weight: $faq-text-bold;
+			text-transform: none;
+			position: relative;
+
+			&:after {
+				@include materialIcon('keyboard_arrow_down');
+				position: absolute;
+				top: 50%;
+				right: .5em;
+				height: 1em;
+				margin-top: -.5em;
+				font-size: 1em;
+				color: $faq-bold-text;
+				transform: rotate(0deg);
+				transition: 
+					color 300ms ease-in-out ,
+					transform 300ms ease-in-out;
+			}
+
+
+			&[data-open="open"] {
+				color: $secondary-color;
+				&:after {
+					color: $secondary-color;
+					transform: rotate(180deg);
+				}
+
+				& + .accFaq-item-content {
+					display: block;
+					padding: .5em 2em;
+					background-color: #fff;
+					.accFaq-item-content {
+						padding: 1em 2em;
+					}
+				}
+			}
+		}
+		// .accFaq-item-content
+		&-content {
+			display: none;
+			.accFaq-item {
+				border: none;
+
+				.accFaq-item-header {
+					font-size: 1em;
+					padding: .5em 1em;
+				}
+				&:not(:last-child) .accFaq-item-header {
+					border-bottom: 1px solid  $faq-lightgray;
+				}
+			}
+
+			p {
+				line-height: 1.5;
+				a {
+					color: $faq-hyperlink-color;
+					font-weight: $faq-text-bold;
+					cursor: inherit;
+
+					&:hover {
+						color: $faq-hyperlink-color-hover;
+					}
+				}
+			}
+		}
+	}
+}

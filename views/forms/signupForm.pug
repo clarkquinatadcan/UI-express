@@ -1,0 +1,68 @@
+form
+	.preloader
+		.loader
+		p processing information
+	h4.form-header Reserve a seat today!
+	.row
+		.col-sm-6.form-group
+			label(for="regFName") First Name*
+			input#regFName.form-control(type="text" name="regFName" placeholder="*First name" required)
+		.col-sm-6.form-group
+			label(for="regLName") Last Name*
+			input#regLName.form-control(type="text" name="regLName" placeholder="*Last name" required)
+	.form-group
+		label(for="regEmail") Email*
+		input#regEmail.form-control(type="email" name="regEmail" placeholder="*Enter email" required)
+	.form-group
+		label(for="regPhoneNumber") Contact Number*
+		input#regPhoneNumber.regPhoneNumber.form-control(type="text" pattern="[(][\\d]{3}[)][-][\\d]{3}[-][\\d]{4,}" name="regPhoneNumber" placeholder="*Contact Number" title="(000)-000-0000" required)
+	.form-group
+		label(for="regAffiliation") Affiliation*
+		input#regAffiliation.form-control(type="text" name="regAffiliation" placeholder="Affiliation, Hospital, Practice" required)
+	.form-group
+		label(for="regSpecialization") Speciality
+		input#regSpecialization.form-control(type="text" name="regSpecialization" placeholder="*Speciality" required)
+	.form-group
+		label(for="country") Country*
+		select#country.form-control(name="regCountry" required)
+	.form-group
+		label(for="regAddress") Address*
+		input#regAddress.form-control(type="text" name="regAddress" placeholder="*Address" required)
+	.form-group
+		label(for="regAddress2") Address 2
+		input#regAddress2.form-control(type="text" name="regAddress2" placeholder="Address 2" required)
+	.row
+		.col-sm-6.form-group
+			label(for="regCity") City*
+			input#regCity.form-control(type="text" name="regCity" placeholder="*City" required)
+		.col-sm-6.form-group
+			label(for="state") State/Province*
+			select#state.form-control(name="regState" required)
+				option(val='') Select *State/Province
+			script(language="javascript").
+				populateCountries("country", "state");
+	.form-group
+		label(for="regZip") Zip*
+		input#regZip.form-control(type="text" name="regZip" placeholder="*Zip" required)
+	.form-group.checkbox
+		label.col-sm-12 Have you previously attended the course?
+		.row
+			.col-sm-3.form-checkbox-mod
+				input#answer1Fellow(type="radio" name="regQuestion1" value="Fellow")
+				label(for="answer1Fellow") #[span Fellow]
+			.col-sm-3.form-checkbox-mod
+				input#answer1Resident(type="radio" name="regQuestion1" value="Resident" checked)
+				label(for="answer1Resident") #[span Resident]
+			.col-sm-6.form-checkbox-mod
+				input#answer1PrevAttendee(type="radio" name="regQuestion1" value="Previous Attendee" checked)
+				label(for="answer1PrevAttendee") #[span Previous Attendee]
+	.form-group
+		label(for="regWorkstation") Select Workstation*
+		select#regWorkstation.form-control(type="nubmer" name="regWorkstation" placeholder="Enter number" required)
+			option(value="") *Select Workstation
+			option(value="GE AW") GE AW
+			option(value="Vital Vitrea") Vital Vitrea
+			option(value="Philips") Philips
+			option(value="Tera Recon") Tera Recon
+	.row-action
+		input.btn.btn-submit(type="submit" value="join the course")

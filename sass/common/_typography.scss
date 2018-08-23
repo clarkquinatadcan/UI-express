@@ -1,0 +1,69 @@
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: $font-family2;
+}
+
+h1,h2,h3,h4,h5,h6,p,span {
+	&.primary {
+		color: $primary-color;
+
+		// .primary-light
+		&-light {
+			opacity: .7;
+			color: $primary-color;
+		}
+	}
+
+	&.secondary {
+		color: $secondary-color;
+	}
+
+
+	&.gray {
+		color: $gray-color;
+	}
+
+	&.light {
+		font-weight: 300;
+		// .light-super
+		&-super {
+			font-weight: 100;
+		}
+	}
+
+	&.bold {
+		font-weight: 800;
+	}
+
+	&.italic {
+		font-style: italic;
+	}
+
+	&.white {
+		color: #FFF;
+	}
+
+	&.slash {
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: .15em;
+			background-color: $tertiary-color;
+			display: block;
+			transform: rotate(-13deg) scaleX(1.2);
+		}
+	}
+}
+
+h1 , h3 {
+	&.header {
+		font-weight: 500;
+		letter-spacing: 2px;
+	}
+}
+
+

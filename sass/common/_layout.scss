@@ -1,0 +1,23 @@
+:root {
+	font-size: $base-font;
+	font-family: $font-family;
+
+	@media(max-width: 1366px) {
+		font-size:( $base-font - 2px );
+	}
+	@media(max-width: 768px) {
+		font-size:( $base-font - 2px );
+	}
+}
+
+body {
+	width: 100%;
+	overflow-x: hidden;
+	font-weight: 400;
+	font-family: $font-family;
+	color: #6B7C93;
+}
+
+li {
+	list-style: none
+}

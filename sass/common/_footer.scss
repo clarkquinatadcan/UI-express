@@ -1,0 +1,27 @@
+$footer-text-color: rgba(#fff, .8);
+
+.footer {
+	height: 70px;
+	background-color: #66A901;
+
+	.container p {
+		color: $footer-text-color;
+		padding-top: 1.3em;
+		margin: 0;
+		text-align: center;
+		font-weight: 300;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		a {
+			color: $footer-text-color;
+			padding-left: .3em;
+			text-decoration: none;
+		}
+
+		@media(max-width: 321px) {
+			padding-top: 2em;
+			font-size: 12px;
+		}
+	}
+}
