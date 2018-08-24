@@ -1,6 +1,20 @@
+// ========================
+// Vars 
+// ========================
+@import 'utils/_my-vars';
+
+
 
 // ========================
 // COMMON
 // ========================
 @import 'common/_my-navigation';
 @import 'common/_my-footer';
+@import 'common/_my-layout';
+
+
+
+// ========================
+// Pages
+// ========================
+@import 'pages/_indexpage';

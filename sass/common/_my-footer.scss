@@ -1,0 +1,39 @@
+.footer-section {
+    color: $footer-text;
+    background: $footer-background;
+
+    .footer-section_ul-list {
+        display: flex;
+    }
+    .footer-section__list {
+        list-style: none;
+        a {
+            text-decoration: none;
+            line-height: 1.5;
+            color: $footer-text;
+        }
+        h3 {
+            color: #ffffff;
+            border-bottom: 5px solid $primaryColor;
+        }
+    }
+}
+
+.footer-info {
+    background: $second-footer;
+    padding: 0;
+    .footer-info__text {
+        color: $footer-text;
+    }
+    .row {
+        padding: 0;
+        .column-1 {
+            padding: 0 32px;
+            p {
+                margin: 0;
+                padding: 8px 0;
+                font-size: 18px;
+            }
+        }
+    }
+}

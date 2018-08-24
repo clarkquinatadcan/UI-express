@@ -4,15 +4,64 @@ head
 	meta(charset="UTF-8")
 	title Document
 	link(rel="stylesheet", href="/css/custom-stylesheet.css")
+	link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
+	
+
 body
-	nav#nav-header
-		li.nav-header__item.nav-header__logo
-			a(href="/")
-				img(src="../images/logo.png", alt="")
+	nav.nav-header
+		a(href="/").nav-header__logo
+			img(src="./images/logo.png", alt="")
 		
-		li.
+		.navbar
+			ul.navbar-nav
+				li.navbar-nav__list
+					p Join the Campaign
+					a(href="/")
+						i.fas.fa-align-justify
+					
+		
 	main
-		
 		block content	
 
 	footer
+		section.footer-section
+			.container
+				.row
+					.column-3
+						img(src="./images/logo-white.png", alt="")
+						p Lorem ipsum dolor sit amet, con-sectetur adipisicing elit. Molestias tempora aperiam et molestiae, vel tenetur!
+					
+					
+					.column-6.footer-section_ul-list
+						ul.footer-section__ul
+							li.footer-section__list
+								h3 Information
+							li.footer-section__list
+								a(href="") Home
+							li.footer-section__list
+								a(href="") About
+							li.footer-section__list
+								a(href="") Contact Us
+							li.footer-section__list
+								a(href="") Faqs
+							li.footer-section__list
+								a(href="") Policies
+						ul
+							li.footer-section__list
+								h3 The Cause
+							li.footer-section__list
+								a(href="") Species
+							li.footer-section__list
+								a(href="") Things you can do
+							li.footer-section__list
+								a(href="") Recruit A Friend
+							li.footer-section__list
+								a(href="") Donate a shelter
+
+		section.footer-info
+			.container
+				.row
+					.column-1
+						p.footer-info__text The Wildlife Project 2018			
+						
+

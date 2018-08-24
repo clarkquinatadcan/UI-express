@@ -1,0 +1,168 @@
+.banner-section {
+    display: flex;
+    min-height: 80vh;
+
+    //.banner-section .banner-header
+    .banner-section__header-text{
+        font-size: $banner-header;
+        line-height: 1.3;
+        margin: 0;
+
+        span {
+            // .banner-section .banner-header span.banner-header__text--highligted
+            &.banner-header__text--highligted {
+                background: $secondaryColor;
+                color: #ffffff;
+                padding: 4px 15px;
+            }
+            // .banner-section .banner-header span.banner-header__text--colored
+            &.banner-header__text--colored {
+                color: $primaryColor;
+            }
+        }
+        
+    }
+
+    .banner-section__text {
+        // .banner-section .banner-section__text p
+        p {
+            line-height: 0.5;
+        }
+    }
+
+    button.banner-section__btn {
+        border: 0;
+        padding: 12px 25px;
+        font-weight: 700;
+        font-size: 20px;
+        cursor: pointer;
+    
+        // #button.banner-section__btn.banner-section__btn-donate
+        &.banner-section__btn--donate {
+            background: $primaryColor;
+            color: #ffffff; 
+        }
+        &.banner-section__btn--join {
+            background: transparent;
+        }
+    }
+}
+
+
+%text-header {
+    font-size: $header-txt;
+    margin: 12px 0;
+}
+
+%text-link {
+    color: $primaryColor;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.movement-section {
+    // .movement-section .movement-section__header-text
+    .movement-section__header-text {
+        @extend %text-header;
+
+        span {
+            // .movement-section .movement-section__header-text span.movement-section__header__text--highligted
+            &.movement-section__header__text--highligted {
+                background: $secondaryColor;
+                color: #ffffff;
+                padding: 4px 15px;
+            }
+            // .movement-section .movement-section__header-text span.movement-section__header__text--colored
+            &.movement-section__header__text--colored {
+                color: $primaryColor;
+            }
+        }
+    }
+    // .movement-section .movement__link
+    .movement__link {
+        @extend %text-link;
+    }
+}
+
+
+.species-section {
+    // .species-section .species-section__header-text
+    .species-section__header-text {
+        @extend %text-header;
+        // .species-section .species-section__header-text span.species__header-text--highligted
+        span {
+            &.species__header-text--highligted {
+                background: $primaryColor;
+                color: #ffffff;
+                padding: 4px 15px;
+            }
+        }
+    }
+    // .species-section .species-section__link
+    .species-section__link {
+        @extend %text-link;
+    }
+}
+
+
+.human-section {
+    // .human-section .human-section__header-text
+   .human-section__header-text {
+        @extend %text-header;
+
+        span {
+            &.human-section__header-text--highligted {
+                background: $secondaryColor;
+                color: #ffffff;
+                padding: 4px 15px;
+            }
+            &.human-section__header-text--colored {
+                color: $secondaryColor;
+            }
+        }
+   }
+
+    //.human-section .human-section__link, 
+   .human-section__link {
+       @extend %text-link;
+   }
+}
+
+
+.contact-section {
+    background: $contact-bg;
+    color: #ffffff;
+
+    .contact-section__header-text {
+        @extend %text-header;
+    }
+
+    span {
+        &.contact-section__header-text--colored {
+            color: $primaryColor;
+        }
+    }
+    .contact-section--content{
+        color: $contact-text;
+    }
+
+    .contact-section-form {
+        display: flex;
+        .contact-section-form__input {
+            padding: 12px;
+            font-size: 20px;
+            width: 100%;
+        }
+        .contact-section-form__button {
+            background: $primaryColor;
+            color: #ffffff;
+            font-weight: 600;
+            border: none;
+            padding: 12px 62px;
+            font-size: 20px;
+            cursor: pointer;
+
+        }
+    }
+
+}

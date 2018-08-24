@@ -1,0 +1,28 @@
+
+.nav-header {
+    padding: 18px 92px;
+    display: flex;
+    align-items: center;
+
+    .nav-header__logo{
+        img{
+            width: auto;
+            height: 70px;
+        }
+    }
+
+    .navbar {
+        margin-left: auto;
+
+        ul{
+            li{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

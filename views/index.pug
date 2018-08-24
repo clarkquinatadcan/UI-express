@@ -1,72 +1,114 @@
 extends layout
 
 block content
-	section#hero_section
-		.container
-			h1 Safe, Innovative, Sustainable Plant Protection
-			a(href='#about_section') Learn More
-	section#about_section
+	section#banner-section.banner-section
 		.container
 			.row
-				.col-6.info
-					h1 About 
-						span NepaBlast
-					p The market is rife with subpar powdery mildew treatment products that pose new threats to human health and safety and cause topsoil depletion, air pollution, groundwater contamination, and greenhouse gas emissions.
-					p We believe that long-term stewardship of both natural and human resources is of equal importance to short-term economic gain. For us, the health and safety of the environment and its inhabitants come first. It is this steadfast commitment to maximizing crop and plant production without compromising environmental and consumer wellbeing that gave us the drive to create NepaBlast.
-					p NepaBlast is a superior water-based, non-toxic, all-natural, contact-based disinfecting solution that uses proprietary Nanomolecular Electronic Polarity Alignment (NEPA) to effectively destroy powdery mildew by balancing out natural botanical pathways to synergize the plant’s ability to fight infection and resist its recurrence.
-					p NepaBlast also works on all other plant diseases and pests, including spores, bacteria, viruses, protozoa, fungi, yeast, and algae. This powerful oxidizing and disinfecting agent is perfectly safe and can easily be applied multiple times per day without causing harm to the plant, environment, or consumer.
-					p Get rid of stubborn powdery mildew upon contact and yield healthier, happier plants without the need for harmful chemicals with NepaBlast.
-					ul
-						li ALL-NATURAL
-						li ORGANIC
-						li CLEAN
-						li NON-GMO
-						li NON-TOXIC
-				.col-6.image
-					img(src="/images/about-min.png", alt="")
+				.column-6 
+					h1.banner-section__header-text Help these 
+												span.banner-header__text--highligted endangered 
+												| animals 
+												span.banner-header__text--colored survive.
+					.row
+						.column-1.banner-section__text
+							p Donate now or Join the Cause 
+							p Be the first to help these animals
+				
+					.row
+						.banner-section__button
+							button.banner-section__btn.banner-section__btn--donate Donate Now!
+							button.banner-section__btn.banner-section__btn--join Join Now
+		
+				.column-6
+					.banner-section__image
+						img(src="./images/penguini.jpg", alt="")
 
-	section#middle_section
+
+	section.movement-section
 		.container
 			.row
-				.col-6.image
-					img(src="/images/whynepablast-min.png", alt="")
+				.column-6
+					.movement-section__image
+						img(src="./images/brazil.jpg", alt="")
 
-				.col-6.info
-					h1 Why Choose 
-						span NepaBlast?
-					ul
-						li 
-							i.m-icon check 
-							span  Effectively kills powdery mildew in just 4 days
-						li 
-							i.m-icon check
-							span  Ensures healthier, happier plants and optimum yields
+				.column-6
+					h1.movement-section__header-text
+						span.movement-section__header__text--highligted A global movement 
+						| of young people making 
+						span.movement-section__header__text--colored positive change
+						
+					.row
+						.column-1
+							p Lorem ipsum dolor sit amet, consectvetur adipisicing elit. Enim minus commodi illum, quidem, a deserunt,recusandae magnam repellendus, pariatur accusan-tium tempore! Facere deleniti odit libero minus, repu-diandae maxime tenetur, ipsam error tempore.
+					.row
+						.column-1
+							a(href="/").movement__link Learn More
 
-						li 
-							i.m-icon check
-							span  Does not result in added odors or tastes on the plants
-						li 
-							i.m-icon check
-							span  Also works on spores, bacteria, viruses, protozoa, fungi, yeast, and algae
-						li 
-							i.m-icon check
-							span  Does not harm helpful bacteria
-						li
-							i.m-icon check
-							span  Safe to use multiple times per day
-						li
-							i.m-icon check
-							span  Water-soluble, non-toxic, all-natural, organic
-						li
-							i.m-icon check
-							span  Consumer- and environment-safe
-						li
-							i.m-icon check
-							span  EPA-, EU-, USDA-, and NSF-approved
 
-	//- section#footer_section
-	//- 	.container
-	//- 		//- p For further questions, call toxicologist Dr. Joe Nieusma at 303-877-3684.
-	//- 		p Copyright &copy; 2018 NepaBlast | Powered by 
-	//- 			a(href='https://www.dnamicro.com/') {dna:micro}
+	section.species-section
+		.container
+			.row
 
+				.column-6
+					h1.species-section__header-text
+						span.species__header-text--highligted We focus on saving 
+						| certain species that help sustainother species.
+						
+					.row
+						.column-1
+							p Lorem ipsum dolor sit amet, consectvetur adipisicing elit. Enim minus commodi illum, quidem, a deserunt,recusandae magnam repellendus, pariatur accusan-tium tempore! Facere deleniti odit libero minus, repu-diandae maxime tenetur, ipsam error tempore.
+					.row
+						.column-1
+							a(href="/").species-section__link Learn More
+
+				.column-6
+					.movement__image
+						img(src="./images/deer.jpg", alt="")
+
+
+
+	section.human-section
+		.container
+			.row
+				.column-6
+					.human-section__image
+						img(src="./images/walrus.jpg", alt="")
+
+				.column-6
+					h1.human-section__header-text
+						span.human-section__header-text--highligted Species are at risk 
+						br
+						| from 
+						span.human-section__header-text--colored human 
+						| activities
+						
+					.row
+						.column-1
+							p Lorem ipsum dolor sit amet, consectvetur adipisicing elit. Enim minus commodi illum, quidem, a deserunt,recusandae magnam repellendus, pariatur accusan-tium tempore! Facere deleniti odit libero minus, repu-diandae maxime tenetur, ipsam error tempore.
+					.row
+						.column-1
+							a(href="/").human-section__link Learn More
+
+	
+	section.contact-section
+		.container
+			.row
+				.column-6
+					h1.contact-section__header-text Be updated of 
+						br
+						span.contact-section__header-text--colored The Wildlife Project.
+				
+					.row
+						.column-1.contact-section--content
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cupiditate in et illum animi adipisci deleniti tempora repellat aliquid vitae!
+
+					.row
+						.column-1
+							form(action="").contact-section-form
+								input(type="text" placeholder="Email Address").contact-section-form__input
+								button.contact-section-form__button Submit
+
+
+				.column-6
+					.contact-section__image
+						img(src="./images/jungle.png", alt="")
