@@ -12,13 +12,35 @@ body
 		a(href="/").nav-header__logo
 			img(src="./images/logo.png", alt="")
 		
-		.navbar
-			ul.navbar-nav
-				li.navbar-nav__list
-					p Join the Campaign
-					a(href="/")
-						i.fas.fa-align-justify
-					
+		
+		ul.navbar-nav
+			li.navbar-nav__list
+				a(href="#") Join the Campaign
+			li.navbar-nav__list
+				a(href="javascript:void(0)" onClick="openNav()").navbar-nav__icon
+					i.fas.fa-bars
+
+	#sidenav.sidenav
+		.sidenav__header
+			a(href="/").nav-header__logo
+				img(src="./images/logo.png", alt="")
+
+			a(href="#" onClick="closeNav()")
+				i.fas.fa-times
+				
+		ul.sidenav__menu
+			li.sidenav__menu--list
+				a(href="#").active Home
+			li.sidenav__menu--list
+				a(href="#") About Us
+			li.sidenav__menu--list
+				a(href="#") Vision and Mission
+			li.sidenav__menu--list
+				a(href="#") The time is Now
+			li.sidenav__menu--list
+				a(href="#") Contact Us
+
+									
 		
 	main
 		block content	
@@ -64,4 +86,9 @@ body
 					.column-1
 						p.footer-info__text The Wildlife Project 2018			
 						
+
+	script
+		include script.js
+
+	
 
