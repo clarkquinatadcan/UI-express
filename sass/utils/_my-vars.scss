@@ -1,33 +1,63 @@
-// ========================
-// Fonts url
-// ========================
+/*********************
+ Fonts url
+*********************/
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:900');
 @import url('https://fonts.googleapis.com/css?family=Raleway:500');
 
 $font-family: 'Raleway', sans-serif;
 
-// =============================
-// font size
-// =============================
+/*********************
+ font size
+*********************/
 $body-fontSize: 20px;
 $banner-header: 70px;
 $header-txt: 48px;
 
-// ========================
-// Theme color
-// ========================
+$body-fontSize-tablet: 18px;
+$banner-header-tablet: 48px;
+$header-txt-tablet: 32px;
+
+
+/*********************
+ Theme color
+*********************/
 $primaryColor: #47D6A3;
 $secondaryColor: #F73166;
 $body-text: #20262B;
 
 
 
-// ========================
-// Additional colors
-// ========================
+/*********************
+ Additional colors
+*********************/
 $contact-bg: #20262B;
 $contact-text: #8F9294;
 $footer-background: #0B0F11;
 $footer-text: #848687;
 $second-footer: #222628;
+
+$section-bg: #20262B;
+
+
+/*********************
+BREAKPOINTS
+*********************/
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 1025px) { @content ; }
+   }
+    @else if $point == laptop {
+      @media (min-width: 769px) { @content ; }
+   }
+    @else if $point == tablet-max {
+        @media (max-width: 768px) { @content ;}
+    }
+     @else if $point == tablet {
+      @media (min-width: 481px) { @content ; }
+   }
+   @else if $point == mobileonly {
+      @media (max-width: 480px)  { @content ; }
+ 
+   }
+ }

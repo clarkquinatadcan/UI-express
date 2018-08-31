@@ -4,6 +4,12 @@
 
     .footer-section_ul-list {
         display: flex;
+
+        ul {
+            &:first-child {
+                padding: 0;
+            }
+        }
     }
     .footer-section__list {
         list-style: none;

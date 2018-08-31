@@ -2,43 +2,65 @@
 html(lang="en")
 head
 	meta(charset="UTF-8")
-	title Document
-	link(rel="stylesheet", href="/css/custom-stylesheet.css")
+	meta( name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+	title The Wildlife Project
+	link(rel="stylesheet", href="./css/aos.css")
+	link(rel="stylesheet", href="./css/custom-stylesheet.css")
 	link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
-	
 
-body
-	nav.nav-header
-		a(href="/").nav-header__logo
-			img(src="./images/logo.png", alt="")
-		
-		
-		ul.navbar-nav
-			li.navbar-nav__list
-				a(href="#") Join the Campaign
-			li.navbar-nav__list
-				a(href="javascript:void(0)" onClick="openNav()").navbar-nav__icon
-					i.fas.fa-bars
+body(id = (pageClass))
+	nav.nav-header#nav-header
+		.nav-header__container
+			a(href="/").nav-header__logo
+				img(src="./images/logo.png", alt="").logo-swap
+			
+			
+			ul.navbar-nav
+				li.navbar-nav__list#join
+					a(href="#") Join the Campaign
+				li.navbar-nav__list
+					a(href="javascript:void(0)" onClick="openNav()").navbar-nav__icon
+						i.fas.fa-bars
 
 	#sidenav.sidenav
 		.sidenav__header
 			a(href="/").nav-header__logo
 				img(src="./images/logo.png", alt="")
 
-			a(href="#" onClick="closeNav()")
+			a(href="javascript:void(0)" onClick="closeNav()")
 				i.fas.fa-times
+		
+		.sidenav__content
+
+			- active = (script)
+
+			mixin page(activePage, path)
+				li#sidenav__menu--list.sidenav__menu--list(class=active == activePage ? 'active' : '')&attributes(attributes)
+					a(href=path)= activePage
 				
-		ul.sidenav__menu
-			li.sidenav__menu--list
-				a(href="#").active Home
-			li.sidenav__menu--list
-				a(href="#") About Us
-			li.sidenav__menu--list
-				a(href="#") Vision and Mission
-			li.sidenav__menu--list
-				a(href="#") The time is Now
-			li.sidenav__menu--list
-				a(href="#") Contact Us
+			ul.sidenav__menu
+				+page('Home', '/')
+				li#sidenav__menu--list-duplicate.active
+					h1 Home
+
+				+page('About Us', '/about')(id="aboutUs", data-pjax="#main")
+				li#sidenav__menu--list-duplicate
+					h1 About Us
+
+				+page('Vision And Mission', '#')
+				li#sidenav__menu--list-duplicate
+					h1 Vision and Mission
+
+				+page('The time is Now', '#')
+				li#sidenav__menu--list-duplicate
+					h1 The time is Now
+
+				+page('Contact Us', '#')
+				li#sidenav__menu--list-duplicate
+					h1 Contact Us
+
+			.sidenav__img
+				img(src="./images/jungle-dribbble-2.gif", alt="")
 
 									
 		
@@ -49,12 +71,12 @@ body
 		section.footer-section
 			.container
 				.row
-					.column-3
+					.column-3(data-aos="fade",data-aos-delay="300")
 						img(src="./images/logo-white.png", alt="")
 						p Lorem ipsum dolor sit amet, con-sectetur adipisicing elit. Molestias tempora aperiam et molestiae, vel tenetur!
 					
 					
-					.column-6.footer-section_ul-list
+					.column-9.footer-section_ul-list(data-aos="fade-left",data-aos-delay="300")
 						ul.footer-section__ul
 							li.footer-section__list
 								h3 Information
@@ -84,11 +106,13 @@ body
 			.container
 				.row
 					.column-1
-						p.footer-info__text The Wildlife Project 2018			
-						
+						p.footer-info__text The Wildlife Project 2018
 
-	script
-		include script.js
+
+	script(src="./js/jquery.min.js")
+	script(src="./js/aos.js")
+	script(src="./js/jquery.paroller.js")
+	script(src='./js/my-script.js')
 
 	
 

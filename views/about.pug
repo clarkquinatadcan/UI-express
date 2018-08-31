@@ -1,7 +1,113 @@
 extends layout
 
 block content
-    section
-        container
-            row
-                h1 Home Page
+    section.banner-section.banner-section__about(data-paroller-factor="0.5", data-paroller-factor-xs="0.1",data-paroller-type="background",data-paroller-direction="vertical")
+        .container
+            .row
+                .column-12(data-paroller-factor="0.5", data-paroller-factor-xs="0.1",data-paroller-type="background",data-paroller-direction="vertical")
+                    h1 About Us
+                    p Lorem ipsum dolor sit ameolor sit ameolor sit amet, consectetur adipisicing elit. Placeat, nemo.
+
+    section.parallax-section
+
+    section.wild-section
+        .container
+            .row
+                .column-6
+                    .wild-section__img
+                        img(src="./images/scall.png", alt="")
+
+                .column-6
+                    h1.wild-section__header-text  
+                        span.wild-section__header-text--highligted Wilderness is cruel 
+                        | and wild animals are at the mercy
+                    
+                    .row
+                        .column-12
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aliquid atque ea labore distinctio, error saepe eveniet tempora asperiores ex amet soluta fugiat veniam optio quovelit aliquam quaerat numquam.
+    
+    section.exp-section
+        .container
+            .row
+                .column-6
+                    h1.exp-section__header-text Experiences with the wild are quite 
+                        span.exp-section__header-text--highligted moving 
+                        |to watch
+
+                    .row
+                        .column-12
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aliquid atque ea labore distinctio, error saepe eveniet tempora asperiores ex amet soluta fugiat veniam optio quovelit aliquam quaerat numquam.
+
+
+                .column-6
+                    .exp-section__img
+                        img(src="./images/earth.png", alt="")
+
+    section.team-section
+        .container
+            .row
+                .column-12
+                    h1.team-section__header-text The Team
+                    p.team-section__header-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aliquid atque ea labore distinctio, error saepe eveniet tempora asperiores ex amet soluta fugiat veniam optio quovelit aliquam quaerat numquam.
+
+            .row
+                .column-4
+                    .team-section__card
+                        .team-section__card--img
+                            img(src="./images/Dr-lorem.jpg", alt="")
+                        .team-section__card--content
+                            h1 Dr. Lorem Ipsum
+                            p Lorem ipsum dolor sit amet, conzsectetur adipisiczing elit. 
+                        
+                .column-4
+                    .team-section__card
+                        .team-section__card--img
+                            img(src="./images/Dr-loreta.jpg", alt="")
+                        .team-section__card--content
+                            h1 Dr. Lorem Ipsum
+                            p Lorem ipsum dolor sit amet, conzsectetur adipisiczing elit. 
+
+                .column-4
+                    .team-section__card
+                        .team-section__card--img
+                            img(src="./images/Dr-John.jpg", alt="")
+                        .team-section__card--content
+                            h1 Dr. Lorem Ipsum
+                            p Lorem ipsum dolor sit amet, conzsectetur adipisiczing elit.  
+    
+    section.email-section
+        .container
+            .row
+                .column-6
+                    h1.email-section__header-text Join Us and be Part of 
+                        span.email-section__header-text--colored The Wildlife Project .
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cupiditate in et illum animi adipisci deleniti tempora repellat aliquid vitae!
+
+                    img(src="./images/jungle.png", alt="")
+
+                .column-6
+                    .row
+                        .column-12.sign-up__header-text
+                            h1 Sign Up
+
+                    form(action="").email-section-form
+                        .row
+                            .column-12
+                                input(type="text" placeholder="First Name").email-section-form__input
+                        .row
+                            .column-12
+                                input(type="text" placeholder="Email Address").email-section-form__input
+                        .row
+                            .column-12
+                                input(type="text" placeholder="Occupation").email-section-form__input
+                        .row
+                            .column-12
+                                input(type="text" placeholder="Email Address").email-section-form__input
+                        .row
+                            .column-12.input-checkbox
+                                input(type="checkbox").email-section-form__input--checkbox
+                                span I agree to the terms and conditions
+                            
+                        .row
+                            .column-12
+                                button.email-section-form__button Sign me up!

@@ -1,0 +1,255 @@
+%sections {
+    background: $section-bg;
+    color: $contact-text;
+    margin: -1px 0;
+}
+
+.banner-section__about {
+    color: #fff;
+    text-align: center;
+    background: url(../images/home-banner1.png);
+    background-color: #127991;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: absolute;
+    width: 100%;
+
+
+
+    h1 {
+        @extend %text-header;
+        font-size: $banner-header;
+        position: relative;
+        z-index: 0;
+
+        &:before {
+            content: "";
+            position: absolute;
+            background: $primaryColor;
+            top: 29px;
+            width: 51%;
+            height: 61%;
+            z-index: -1;
+            margin: auto 0;
+            right: 29%;
+        }
+    }
+
+    p {
+        max-width: 580px;
+        margin: auto;
+    }
+
+}
+
+.parallax-section {
+    background-image: url(../images/home-banner2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.wild-section {
+    @extend %sections;
+
+    .wild-section__header-text {
+        @extend %text-header;
+        color: #ffffff;
+
+        span {
+            &.wild-section__header-text--highligted  {
+                background: $secondaryColor;
+                padding: 4px 15px;
+            }
+        }
+    }
+}
+
+
+.exp-section {
+    @extend %sections;
+    
+    .exp-section__header-text {
+        @extend %text-header;
+        color: #ffffff;
+
+        span {
+            &.exp-section__header-text--highligted {
+                background: $primaryColor;
+                padding: 4px 15px;
+            }
+        }
+    }
+
+    @include breakpoint(tablet-max) {
+        .row {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+
+.team-section {
+    @extend %sections;
+    color: #ffffff;
+    text-align: center;
+
+    .team-section__header-text {
+        @extend %text-header;
+        position: relative;
+        z-index: 0;
+
+        &:before {
+            content: "";
+            position: absolute;
+            background: $secondaryColor;
+            top: 24px;
+            width: 22%;
+            height: 50%;
+            z-index: -1;
+            margin: auto 0;
+            right: 39%;
+        }
+    }
+
+
+    .row {
+        justify-content: center;
+
+        .column-4 {
+            display: flex;
+            justify-content: center;
+            padding: 0 32px;
+        }
+    }
+    .team-section__header-desc {
+        padding: 0 32px;
+        max-width: 65%;
+        margin: 0 auto;
+
+        @include breakpoint(tablet-max) {
+            max-width: 100%;
+        }
+    }
+
+    .team-section__card {
+        position: relative;
+        max-width: 380px;
+        padding: 18px 0;
+
+        .team-section__card--img {
+            img {
+                box-shadow: 18px 18px #353B3F;
+            }
+        }
+
+        // .team-section .team-section__card .team-section__card--content
+        .team-section__card--content {
+            position: absolute;
+            background: #f73166;
+            bottom: 45px;
+            left: -22px;
+            right: 8px;
+            padding: 3px 7px;
+            text-align: left;
+
+            h1 {
+                margin: 0;
+            }
+            p {
+                font-size: 14px;
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+.email-section {
+    @extend %sections;
+
+    .email-section__header-text {
+        @extend %text-header;
+        color: #ffffff;
+
+        span {
+            &.email-section__header-text--colored {
+                color: $primaryColor;
+            }
+        }
+    }
+
+    .sign-up__header-text {
+        h1 {
+            @extend %text-header;
+            color: #ffffff;
+            position: relative;
+            z-index: 0;
+            text-align: center;
+
+            &:before {
+                content: "";
+                position: absolute;
+                background: #f73166;
+                top: 24px;
+                width: 37%;
+                height: 50%;
+                z-index: -1;
+                margin: auto 0;
+                right: 32%;
+            }
+        }
+    }
+
+    .email-section-form {
+        @media (max-width: 768px) {
+            padding: 0 72px;
+        }
+        @media (max-width: 540px) {
+            padding: 0 12px;
+        }
+
+        input{
+            &.email-section-form__input {
+                padding: 12px;
+                font-size: 20px;
+                width: 100%;
+            }
+
+            &.email-section-form__input--checkbox {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        .input-checkbox {
+            display: flex;
+            align-items: center;
+
+            span {
+                padding: 0 8px;
+            }
+        }
+
+        // .email-section .email-section-form .email-section-form__button
+        .email-section-form__button {
+            background: $secondaryColor;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            padding: 16px 28px;
+            font-size: 24px;
+            cursor: pointer;
+
+            @include breakpoint(tablet-max) {
+                width: 100%;
+            }
+        }
+
+    }
+
+
+}

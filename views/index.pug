@@ -4,13 +4,13 @@ block content
 	section#banner-section.banner-section
 		.container
 			.row
-				.column-6 
+				.column-6(data-aos="fade-right",data-aos-delay="300")
 					h1.banner-section__header-text Help these 
 												span.banner-header__text--highligted endangered 
 												| animals 
 												span.banner-header__text--colored survive.
 					.row
-						.column-1.banner-section__text
+						.column-12.banner-section__text
 							p Donate now or Join the Cause 
 							p Be the first to help these animals
 				
@@ -19,7 +19,7 @@ block content
 							button.banner-section__btn.banner-section__btn--donate Donate Now!
 							button.banner-section__btn.banner-section__btn--join Join Now
 		
-				.column-6
+				.column-6(data-aos="fade-left",data-aos-delay="500")
 					.banner-section__image
 						img(src="./images/penguini.jpg", alt="")
 
@@ -27,41 +27,43 @@ block content
 	section.movement-section
 		.container
 			.row
-				.column-6
+				.column-6(data-aos="fade-right",data-aos-delay="500")
 					.movement-section__image
 						img(src="./images/brazil.jpg", alt="")
 
-				.column-6
+				.column-6(data-aos="fade",data-aos-delay="300")
 					h1.movement-section__header-text
 						span.movement-section__header__text--highligted A global movement 
 						| of young people making 
 						span.movement-section__header__text--colored positive change
 						
 					.row
-						.column-1
+						.column-12
 							p Lorem ipsum dolor sit amet, consectvetur adipisicing elit. Enim minus commodi illum, quidem, a deserunt,recusandae magnam repellendus, pariatur accusan-tium tempore! Facere deleniti odit libero minus, repu-diandae maxime tenetur, ipsam error tempore.
 					.row
-						.column-1
-							a(href="/").movement__link Learn More
+						.column-12
+							a(href="/").movement__link Learn More 
+								i.fas.fa-plus
 
 
 	section.species-section
 		.container
 			.row
 
-				.column-6
+				.column-6(data-aos="fade",data-aos-delay="300")
 					h1.species-section__header-text
 						span.species__header-text--highligted We focus on saving 
 						| certain species that help sustainother species.
 						
 					.row
-						.column-1
+						.column-12
 							p Lorem ipsum dolor sit amet, consectvetur adipisicing elit. Enim minus commodi illum, quidem, a deserunt,recusandae magnam repellendus, pariatur accusan-tium tempore! Facere deleniti odit libero minus, repu-diandae maxime tenetur, ipsam error tempore.
 					.row
-						.column-1
-							a(href="/").species-section__link Learn More
+						.column-12
+							a(href="/").species-section__link Learn More 
+								i.fas.fa-plus
 
-				.column-6
+				.column-6(data-aos="fade-left",data-aos-delay="500")
 					.movement__image
 						img(src="./images/deer.jpg", alt="")
 
@@ -70,11 +72,11 @@ block content
 	section.human-section
 		.container
 			.row
-				.column-6
+				.column-6(data-aos="fade-right",data-aos-delay="300")
 					.human-section__image
 						img(src="./images/walrus.jpg", alt="")
 
-				.column-6
+				.column-6(data-aos="fade",data-aos-delay="500")
 					h1.human-section__header-text
 						span.human-section__header-text--highligted Species are at risk 
 						br
@@ -83,27 +85,29 @@ block content
 						| activities
 						
 					.row
-						.column-1
+						.column-12
 							p Lorem ipsum dolor sit amet, consectvetur adipisicing elit. Enim minus commodi illum, quidem, a deserunt,recusandae magnam repellendus, pariatur accusan-tium tempore! Facere deleniti odit libero minus, repu-diandae maxime tenetur, ipsam error tempore.
 					.row
-						.column-1
-							a(href="/").human-section__link Learn More
+						.column-12
+							a(href="/").human-section__link Learn More 
+								i.fas.fa-plus
+							
 
 	
 	section.contact-section
 		.container
 			.row
-				.column-6
+				.column-6(data-aos="fade",data-aos-delay="500")
 					h1.contact-section__header-text Be updated of 
 						br
 						span.contact-section__header-text--colored The Wildlife Project.
 				
 					.row
-						.column-1.contact-section--content
+						.column-12.contact-section--content
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cupiditate in et illum animi adipisci deleniti tempora repellat aliquid vitae!
 
 					.row
-						.column-1
+						.column-12
 							form(action="").contact-section-form
 								input(type="text" placeholder="Email Address").contact-section-form__input
 								button.contact-section-form__button Submit

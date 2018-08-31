@@ -1,39 +1,93 @@
 
+%logo-img {
+    width: auto;
+    height: 70px;
+
+    @include breakpoint(tablet-max) {
+        height: 48px;
+    }
+}
+#nav-header {
+    background: #fff;
+}
+// #aboutpage {
+//     #nav-header {
+//         background: #1f252b;
+
+//     }
+//     .nav-header ul li a {
+//         color: #fff;
+//     }
+// }
+
 .nav-header {
-    padding: 18px 92px;
-    display: flex;
-    align-items: center;
-    max-width: 1280px;
-    margin: auto;
-    padding: 15px 47px;
+    position: fixed;
+    width: 100%;
+    // background: #ffffff;
+    padding: 0 15px;
+    z-index: 997;
+    transition: 0.4s;
+
+    // .nav-header .nav-header__container
+    .nav-header__container {
+        display: flex;
+        align-items: center;
+        max-width: 1280px;
+        margin: auto;
+        padding: 12px 47px;
+
+        @include breakpoint(mobileonly) {
+            padding: 0px;
+            display: block;
+            padding: 0;
+        }
+    }
     
+
+    // .nav-header .nav-header__logo img
     .nav-header__logo{
         img{
-            width: auto;
-            height: 70px;
+            @extend %logo-img;
         }
     }
 
-
+    //.nav-header ul
     ul {
         margin-left: auto;
         display: flex;
         align-items: center;
+        
+        @media (max-width: 500px) {
+            padding: 0;
+        }
 
+        // .nav-header ul li
         li {
             padding: 0 32px;
-
-            &:last-child {
-                padding: 0 10px;
+            @media (max-width: 500px) {
+                flex: 1;
             }
 
+            // .nav-header ul li:last-child
+            &:last-child {
+                padding: 0 10px;
+
+                @media (max-width: 500px) {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+
+            // .nav-header ul li a
             a {
                 text-decoration: none;
                 color: $body-text;
                 font-weight: 600;
+                font-size: 16px;
 
+                // .nav-header ul li a.navbar-nav__icon
                 &.navbar-nav__icon {
-                        font-size: 32px;
+                    font-size: 32px;
                 }
             }
         }
@@ -51,17 +105,24 @@
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 12px;
+    z-index: 999;
 }
 
 .sidenav {
     @extend %sideNavigation;
 
+    // .sidenav .sidenav__header
     .sidenav__header {
         display: flex;
         align-items: self-start;
         padding: 0 92px;
 
+        @media (max-width: 500px) {
+            padding: 0px 15px;
+        }
+
         a {
+            // .sidenav .sidenav__header a:last-child
             &:last-child  {
                 margin-left: auto;
                 font-size: 42px;
@@ -70,16 +131,34 @@
         }
 
         img {
-            width: auto;
-            height: 72px;
+            @extend %logo-img;
         }
 
     }
+    // .sidenav .sidenav__content
+    .sidenav__content {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        .sidenav__img {
+            text-align: center;
+            img {
+                max-width: 80%;
+                text-align: center;
+            }
+        }
+    }
 
+    // .sidenav .sidenav__menu
     .sidenav__menu {
         padding: 30px 72px;
+        
+        // .sidenav .sidenav__menu .sidenav__menu--list
         .sidenav__menu--list {
             padding: 8px 0;
+
+            // .sidenav .sidenav__menu .sidenav__menu--list a
             a {
                 font-size: 42px;
                 font-weight: 600;
@@ -87,7 +166,7 @@
                 text-decoration: none;
                 position: relative;
                 z-index: 0;
-                transition: 0.3s;
+                transition: 1s;
 
                 &:hover::after{
                     content: '';
@@ -99,13 +178,52 @@
                     left: 0;
                     padding-right: 5em;
                     z-index: -1;
-                    /*transform: scale(2.1) 2s;*/
+                }
+                
+                @media (max-width: 500px) {
+                    font-size: 22px;
+                }
+
+                
+            }
+
+        }
+
+        .active {
+            a {
+                &::after{
+                    content: '';
+                    background: $primaryColor;
+                    position: absolute;
+                    width: 100%;
+                    height: 60%;
+                    top: 20px;
+                    left: 0;
+                    padding-right: 5em;
+                    z-index: -1;
                 }
             }
         }
+
+        #sidenav__menu--list-duplicate {
+            position: absolute;
+            z-index: -1;
+            h1{
+                position: fixed;
+                font-size: 12em;
+                letter-spacing: 1px;
+                top: 50px;
+                left: -11rem;
+                color: #0000001c;
+                transform: rotate(90deg);
+                white-space: nowrap;
+                max-width: 500px;
+                z-index: -1;
+    
+            }
+            
+        }
+
     }
 
 }
-
-    /*writing-mode: vertical-rl;
-    text-orientation: mixed;*/

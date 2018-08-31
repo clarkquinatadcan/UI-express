@@ -1,12 +1,24 @@
 .banner-section {
     display: flex;
-    min-height: 80vh;
-
-    //.banner-section .banner-header
+    
+    @include breakpoint(desktop) {
+        min-height: 80vh;
+    }
+ 
+    //.banner-section .banner-section__header-text
     .banner-section__header-text{
-        font-size: $banner-header;
+        font-size: $banner-header-tablet;
         line-height: 1.3;
         margin: 0;
+
+        @include breakpoint(desktop) {
+            font-size: $banner-header;
+        }
+
+        @include breakpoint(mobileonly) {
+            font-size: 38px;
+        }
+        
 
         span {
             // .banner-section .banner-header span.banner-header__text--highligted
@@ -26,7 +38,8 @@
     .banner-section__text {
         // .banner-section .banner-section__text p
         p {
-            line-height: 0.5;
+            // line-height: 0.5;
+            margin: 0
         }
     }
 
@@ -46,18 +59,40 @@
             background: transparent;
         }
     }
+
+    @extend %row-reverse;
+
 }
 
+%row-reverse {
+    @media (max-width: 768px) {
+        .column-6 {
+            &:first-child {
+                order: 2;
+            }
+        }
+    }
+}
 
 %text-header {
-    font-size: $header-txt;
+    font-size: $header-txt-tablet;
     margin: 12px 0;
+
+    @include breakpoint(desktop) {
+        font-size: $header-txt;
+    }
 }
 
 %text-link {
     color: $primaryColor;
     text-decoration: none;
     font-weight: 600;
+
+    i {
+        font-size: 13px;
+        position: relative;
+        top: -5px;
+    }
 }
 
 .movement-section {
@@ -102,6 +137,10 @@
     .species-section__link {
         @extend %text-link;
     }
+
+    
+    @extend %row-reverse;
+    
 }
 
 
@@ -146,12 +185,24 @@
         color: $contact-text;
     }
 
+    // .contact-section .contact-section-form
     .contact-section-form {
         display: flex;
+
+        @include breakpoint(mobileonly) {
+            display: block;
+        }
+
         .contact-section-form__input {
             padding: 12px;
             font-size: 20px;
             width: 100%;
+
+            @include breakpoint(mobileonly) {
+               margin: 12px 0;
+               font-size: 18px;
+            }
+
         }
         .contact-section-form__button {
             background: $primaryColor;
@@ -162,7 +213,11 @@
             font-size: 20px;
             cursor: pointer;
 
+            @include breakpoint(mobileonly) {
+                width: 100%;
+             }
         }
     }
 
 }
+
